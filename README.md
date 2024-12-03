@@ -25,8 +25,8 @@ Sigue estos pasos para clonar y configurar el proyecto en tu máquina:
 
 1. **Clona el repositorio**:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd <NOMBRE_DEL_PROYECTO>
+   git clone https://github.com/cristianEncarnacion/Sistema-de-Facturacion
+   cd billinsystem
    ```
 2. **Instala dependencias**
 
@@ -49,7 +49,7 @@ Sigue estos pasos para clonar y configurar el proyecto en tu máquina:
 npm run dev
 ```
 
-5. **Accede a la aplicación: Abre tu navegador y visita: http://localhost:3000.**
+5. **Accede a la aplicación: Abre tu navegador y visita: http://localhost:5173.**
 
 ## Funcionalidades
 
