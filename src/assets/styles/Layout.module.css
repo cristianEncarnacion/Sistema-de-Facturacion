@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar content";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 55px 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content {
+  grid-area: content;
+  padding: 20px 10px;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .gridContainer {
+    display: grid;
+    grid-template-areas:
+      "navbar navbar"
+      "sidebar content";
+    grid-template-columns: 0 1fr;
+    grid-template-rows: 55px 1fr;
+    height: 100vh;
+  }
+}

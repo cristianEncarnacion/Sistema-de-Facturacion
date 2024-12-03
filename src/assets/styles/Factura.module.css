@@ -1,0 +1,67 @@
+/* Contenedor principal del formulario */
+.firstContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+  gap: 20px; /* Espacio entre elementos */
+}
+
+/* Estilos para los contenedores de cada campo */
+.cliente,
+.producto,
+.cantidad,
+.precio,
+.fecha,
+.codigoProducto {
+  flex: 1 1 calc(33.333% - 20px); /* Cada campo ocupa aproximadamente un tercio del ancho del contenedor, ajustado por el gap */
+  display: flex;
+  flex-direction: column; /* Alinea el label y el input/select en columna */
+  align-items: stretch; /* Alineación del contenido para ocupar todo el ancho del contenedor */
+  gap: 5px; /* Espacio entre el label y el input/select */
+  margin-bottom: 20px; /* Espacio inferior para separar cada campo */
+}
+
+/* Estilo para las etiquetas */
+.label {
+  white-space: nowrap; /* Evita que el texto del label se corte */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 14px; /* Tamaño de la fuente del label */
+}
+
+/* Estilo para los inputs y selects */
+.formControl {
+  width: 100%; /* Ocupa todo el ancho disponible dentro del contenedor */
+  padding: 8px; /* Espacio interior del input/select */
+  font-size: 14px; /* Tamaño de la fuente dentro de los inputs/selects */
+  border: 1px solid #ccc; /* Borde estándar */
+  border-radius: 4px; /* Esquinas redondeadas */
+  box-sizing: border-box; /* Incluye el padding y el border en el cálculo del width */
+}
+
+/* Estilo para el placeholder */
+.formControl::placeholder {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Estilo para el botón */
+.boton {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Espacio superior para separar el botón del formulario */
+  margin-bottom: 10px;
+}
+
+.boton button {
+  padding: 10px 20px; /* Ajuste del padding del botón */
+  font-size: 16px; /* Tamaño de la fuente del botón */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.boton button:hover {
+  background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+}

@@ -1,0 +1,49 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th,
+.td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.actionsButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px;
+}
+
+.icon {
+  font-size: 16px;
+  color: #333;
+}
+
+.icon:hover {
+  color: #007bff;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 900px) {
+  .table {
+    font-size: 8px; /* Reduce el tamaño del texto */
+  }
+
+  .td,
+  .th {
+    padding: 1px; /* Reduce el padding en pantallas pequeñas */
+  }
+}
