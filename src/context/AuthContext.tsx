@@ -61,6 +61,19 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const login = async (email: string, password: string) => {
     try {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (session) {
+        setUser({
+          id: session.user.id,
+          email: session.user.email || "",
+        });
+      }
+      if (session?.user.email_confirmed_at === null) {
+        setError("Debe activar su cuenta para iniciar sesión");
+        return;
+      }
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
